@@ -2,9 +2,11 @@
 
 $version = "0.0.1";
 
-$auth = "";
-
 $auth = $_GET['auth'];
+
+if (!isset($auth)) {
+$auth = "";
+}
 
 include_once "config/config.php";
 include $PATH."/app/dblogin.php";
