@@ -74,7 +74,12 @@ $valid = checkauth($auth);
 if ($valid) {
 echo "BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//hacksw/handcal//NONSGML v1.0//EN";
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+METHOD:PUBLISH
+X-WR-CALNAME:Who's on call?
+X-WR-TIMEZONE:Europe/London
+X-WR-CALDESC:
+";
 $schedule = getschedule();
 echo process($schedule);
 echo "END:VCALENDAR";
