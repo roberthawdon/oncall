@@ -2,6 +2,8 @@
 
 $version = "0.0.1";
 
+$auth = "";
+
 $auth = $_GET['auth'];
 
 include_once "config/config.php";
