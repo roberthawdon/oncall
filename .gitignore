@@ -1,0 +1,6 @@
+# Oncall stuff
+TO\ USE/
+config/config.php
+uploads/*
+*~
+code/
