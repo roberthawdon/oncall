@@ -30,7 +30,7 @@ function getschedule() {
 
 global $con, $PATH, $DBHOST, $DBUSER, $DBPASS, $DBNAME;
 
-$query = "SELECT * FROM tbl_schedules";
+$query = "SELECT tbl_schedules.*, tbl_users.* FROM tbl_schedules INNER JOIN tbl_users ON tbl_schedules.user_ID=tbl_users.ID";
 
 mysqli_select_db($con , $DBNAME) or die("Error: ".mysqli_error($con));
 
