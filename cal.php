@@ -61,7 +61,8 @@ SEQUENCE:0
 STATUS:CONFIRMED
 SUMMARY:".$row['first_name']." ".$row['last_name']." is on call
 TRANSP:TRANSPARENT
-END:VEVENT";
+END:VEVENT
+";
   }
 }
 
