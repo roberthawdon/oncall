@@ -3,5 +3,4 @@ TO\ USE/
 config/config.php
 uploads/*.png
 *~
-code/
 .htaccess
