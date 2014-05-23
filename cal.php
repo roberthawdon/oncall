@@ -76,8 +76,7 @@ VERSION:2.0
 PRODID:-//hacksw/handcal//NONSGML v1.0//EN";
 $schedule = getschedule();
 echo process($schedule);
-END:VCALENDAR";
-
+echo "END:VCALENDAR";
 } else {
 echo "Error: Bad Authentication";
 }
