@@ -25,7 +25,7 @@ include "app/getcalldata.php";
 <h1>Who's on call?</h1>
 </div>
 <div id="oncall">
-<img src="assets/<?php print $avatar ?>" width="80px" height="80px" alt="<?php print $fullname ?>" />
+<img src="uploads/<?php print $avatar ?>" width="80px" height="80px" alt="<?php print $fullname ?>" />
 <p><?php print $fullname ?> is currently on call</p>
 <div class="actions">
 <p><a href="callto:<?php print $phone ?>" class="button-link">Phone</a></p>

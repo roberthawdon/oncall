@@ -43,7 +43,7 @@ var grd=roundRect(ctx, 10, 10, 780, 200, 50, true);
 
 var imgFace=c.getContext("2d");
 var img = new Image();
-img.src = "assets/<?php print $avatar ?>"
+img.src = "uploads/<?php print $avatar ?>"
 img.onload = function () {
    imgFace.drawImage(img,120,30);
 }
