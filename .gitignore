@@ -1,6 +1,7 @@
 # Oncall stuff
 TO\ USE/
 config/config.php
-uploads/*
+uploads/*.png
 *~
 code/
+.htaccess

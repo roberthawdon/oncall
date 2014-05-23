@@ -1,0 +1,88 @@
+<!-- Who's on call? -->
+
+<?php
+
+include "app/getcalldata.php";
+
+?>
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel='stylesheet' id='reset'  href='assets/reset.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main'  href='assets/oncall.css' type='text/css' />
+<script type="text/javascript" src="assets/rounded_corners.js"></script>
+<?php include_once "assets/favicon.php"; ?>
+<title><?php print $fullname ?> is currently on call</title>
+</head>
+<body>
+<div id="page">
+<div id="top">
+<img src="assets/logo.png" alt="Bede Gaming" title="Bede Gaming" />
+<h1>Who's on call?</h1>
+</div>
+<div id="oncall">
+<canvas id="OnCallWindow" width="800" height="220" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+OnCallWindow.style.border = "none";
+
+var c=document.getElementById("OnCallWindow");
+var ctx=c.getContext("2d");
+
+ctx.strokeStyle = "rgba(0, 0, 0, 0)";
+var grd=ctx.createLinearGradient(0,0,0,200);
+grd.addColorStop(0,"#c7c7ff");
+grd.addColorStop(1,"#7e7eff");
+ctx.fillStyle = grd;
+
+var grd=roundRect(ctx, 10, 10, 780, 200, 50, true);
+
+var imgFace=c.getContext("2d");
+var img = new Image();
+img.src = "assets/<?php print $avatar ?>"
+img.onload = function () {
+   imgFace.drawImage(img,120,30);
+}
+
+var lblName=c.getContext("2d");
+lblName.font = "34px Arial";
+lblName.fillStyle = "#000000";
+lblName.fillText('<?php print $fullname ?>',400,100);
+
+var lblOnCall=c.getContext("2d");
+lblOnCall.font = "30px Arial";
+lblOnCall.fillStyle = "#000000";
+lblOnCall.fillText('is currently on call',400,140);
+
+</script>
+
+<div class="actions">
+<p><a href="callto:<?php print $phone ?>" class="button-link"><?php print $phone ?></a> <a href="mailto:<?php print $email ?>" class="button-link"><?php print $email ?></a></p>
+<!--<form action="callto:<?php print $phone ?>">
+<div>
+<input id="sitebutton" type="submit" value="<?php print $phone ?>">
+</div>
+</form>
+<form action="mailto:<?php print $email ?>">
+<div>
+<input id="sitebutton" type="submit" value="<?php print $email ?>">
+</div>
+</form>-->
+<p>Note: Only escalate to <?php print $firstname ?> in the event of major site issues.<br />For non urgent issues, please file a support ticket to support@bedegaming.zendesk.com.</p>
+</div>
+</div>
+<img src="code/php/qr_img.php?d=Testing+dynamic+QR+generation" class="qrborder" alt="QR Code" title="Scan me with your phone" />
+<!--<img src="assets/qr_img_example.png" alt="QR Code" title="Scan me with your phone" />-->
+<p>Scan the QR code to access this page directly from your phone.</p><br />
+<!--<input id="sitebutton" type="button" value="View on call schedule">-->
+<p><a href="#" class="button-link">View on call schedule</a></p>
+</div>
+<div id="footer">
+<p>&quot;Who's On Call?&quot; Version <?php echo $version?> &copy; 2014 <a href="http://robertianhawdon.me.uk">Robert Hawdon</a> - Bede Gaming Ltd.</p>
+<p>Best viewed with any modern browser</p>
+</div>
+</html>

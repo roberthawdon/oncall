@@ -1,0 +1,124 @@
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	background: #f0f0f0 url(bg.png) repeat-x;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+font-size: xx-large;
+}
+
+#page {
+width: 950px;
+  margin-left: auto ;
+  margin-right: auto ;
+background: #FFFFFF;
+text-align: center;
+}
+
+.actions form,
+.actions form div {
+    display: inline;
+}
+
+.actions button {
+    display: inline;
+    vertical-align: middle;
+}
+
+#footer {
+text-align: center;
+font-size: small;
+}
+
+.button-link {
+    padding: 10px 15px;
+    background: #7e7eff;
+    color: #000;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size:1.1em;
+    letter-spacing:.1em;
+    display: inline-block;
+    margin-top:3px;
+    margin-bottom:3px;
+    cursor: pointer;
+
+}
+.button-link:hover {
+    background: #6e6eff;
+    border: solid 1px #2A4E77;
+    text-decoration: none;
+}
+.button-link:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: #2E5481;
+    border: solid 1px #203E5F;
+}
+
+img.qrborder {
+	background-color: #9999ff;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+	border: 1px solid #8888FF;
+	font: normal 0.9em Verdana,sans-serif;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display:inline-block;
+
+}
+
+/***FIRST STYLE THE BUTTON***/
+input#sitebutton {
+border:2px groove #7c93ba;
+cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+padding: 5px 25px;
+/*give the background a gradient - see cssdemos.tupence.co.uk/gradients.htm for more info*/
+background-color:#7e7eff; /*required for browsers that don't support gradients*/
+background: -webkit-gradient(linear, left top, left bottom, from(#c7c7ff), to(#7e7eff));
+background: -webkit-linear-gradient(top, #c7c7ff, #7e7eff);
+background: -moz-linear-gradient(top, #c7c7ff, #7e7eff);
+background: -o-linear-gradient(top, #c7c7ff, #7e7eff);
+background: linear-gradient(top, #c7c7ff, #7e7eff);
+/*style to the text inside the button*/
+font-family: Arial, sans-serif;
+color:#000;
+font-size:1.1em;
+letter-spacing:.1em;
+/*give the corners a small curve*/
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+}
+/*add a drop shadow to the button*/
+-webkit-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+-moz-box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+box-shadow: rgba(0, 0, 0, .75) 0 2px 6px;
+}
+/***NOW STYLE THE BUTTON'S HOVER AND FOCUS STATES***/
+input#sitebutton:hover, input#sitebutton:focus {
+color:#edebda;
+/*reduce the spread of the shadow to give a pushed effect*/
+-webkit-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+-moz-box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+box-shadow: rgba(0, 0, 0, .25) 0 1px 0px;
+}
