@@ -6,6 +6,7 @@ $auth = $_GET['auth'];
 
 include_once "config/config.php";
 include $PATH."/app/dblogin.php";
+include $PATH."/app/getoption.php";
 
 function checkauth($auth) {
 

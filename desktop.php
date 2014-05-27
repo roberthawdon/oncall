@@ -63,7 +63,7 @@ lblOnCall.fillText('is currently on call',400,140);
 <div class="actions">
 <p><a href="callto:<?php print $phone ?>" class="button-link button-colour-main"><?php print $phone ?></a> <a href="mailto:<?php print $email ?>" class="button-link button-colour-main"><?php print $email ?></a></p>
 <p>Note: Only escalate to <?php print $firstname ?> in the event of major site issues.<br />For non urgent issues, please use the button below to submit a support ticket.</p>
-<p><a href="#" class="button-link button-colour-alt">Submit a support ticket</a></p>
+<p><a href="<?php getoption("support_email"); ?>" class="button-link button-colour-alt">Submit a support ticket</a></p>
 </div>
 </div>
 <img src="code/php/qr_img.php?d=Testing+dynamic+QR+generation" class="qrborder" alt="QR Code" title="Scan me with your phone" />
