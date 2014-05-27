@@ -28,9 +28,9 @@ include "app/getcalldata.php";
 <img src="uploads/<?php print $avatar ?>" width="80px" height="80px" alt="<?php print $fullname ?>" />
 <p><?php print $fullname ?> is currently on call</p>
 <div class="actions">
-<p><a href="callto:<?php print $phone ?>" class="button-link">Phone</a></p>
-<p><a href="sms:<?php print $phone ?>" class="button-link">SMS</a></p>
-<p><a href="mailto:<?php print $email ?>" class="button-link">E-Mail</a></p>
+<p><a href="callto:<?php print $phone ?>" class="button-link button-colour-main">Phone</a></p>
+<p><a href="sms:<?php print $phone ?>" class="button-link button-colour-main">SMS</a></p>
+<p><a href="mailto:<?php print $email ?>" class="button-link button-colour-main">E-Mail</a></p>
 <!--<form action="tel:<?php print $phone ?>">
 <div>
 <input id="sitebutton" type="submit" value="Call">
@@ -49,7 +49,7 @@ include "app/getcalldata.php";
 <p>Note: Only escalate to <?php print $firstname ?> in the event of major site issues.<br />For non urgent issues, please file a support ticket to support@bedegaming.zendesk.com.</p>
 </div>
 </div>
-<p><a href="#" class="button-link">View on call schedule</a></p>
+<p><a href="#" class="button-link button-colour-main">View on call schedule</a></p>
 <!--<input id="sitebutton" type="button" value="View on call schedule">-->
 </div>
 <div id="footer">
