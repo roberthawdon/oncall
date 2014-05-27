@@ -31,27 +31,11 @@ include "app/getcalldata.php";
 <p><a href="callto:<?php print $phone ?>" class="button-link button-colour-main">Phone</a></p>
 <p><a href="sms:<?php print $phone ?>" class="button-link button-colour-main">SMS</a></p>
 <p><a href="mailto:<?php print $email ?>" class="button-link button-colour-main">E-Mail</a></p>
-<!--<form action="tel:<?php print $phone ?>">
-<div>
-<input id="sitebutton" type="submit" value="Call">
-</div>
-</form>
-<form action="sms:<?php print $phone ?>" method="post">
-<div>
-<input id="sitebutton" type="submit" value="SMS">
-</div>
-</form>
-<form action="mailto:<?php print $email ?>">
-<div>
-<input id="sitebutton" type="submit" value="E-Mail">
-</div>
-</form>-->
-<p>Note: Only escalate to <?php print $firstname ?> in the event of major site issues.<br />For non urgent issues, please file a support ticket to support@bedegaming.zendesk.com.</p>
+<p>Note: Only escalate to <?php print $firstname ?> in the event of major site issues.<br />For non urgent issues, please use the button below to submit a support ticket.</p>
 <p><a href="#" class="button-link button-colour-alt">Support ticket</a></p>
 </div>
 </div>
 <p><a href="#" class="button-link button-colour-main">View on call schedule</a></p>
-<!--<input id="sitebutton" type="button" value="View on call schedule">-->
 </div>
 <div id="footer">
 <p>Who's On Call? V. <?php echo $version?><br />&copy; 2014 <a href="http://robertianhawdon.me.uk">Robert Hawdon</a> - Bede Gaming Ltd.</p>

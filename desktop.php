@@ -62,24 +62,12 @@ lblOnCall.fillText('is currently on call',400,140);
 
 <div class="actions">
 <p><a href="callto:<?php print $phone ?>" class="button-link button-colour-main"><?php print $phone ?></a> <a href="mailto:<?php print $email ?>" class="button-link button-colour-main"><?php print $email ?></a></p>
-<!--<form action="callto:<?php print $phone ?>">
-<div>
-<input id="sitebutton" type="submit" value="<?php print $phone ?>">
-</div>
-</form>
-<form action="mailto:<?php print $email ?>">
-<div>
-<input id="sitebutton" type="submit" value="<?php print $email ?>">
-</div>
-</form>-->
-<p>Note: Only escalate to <?php print $firstname ?> in the event of major site issues.<br />For non urgent issues, please file a support ticket to support@bedegaming.zendesk.com.</p>
+<p>Note: Only escalate to <?php print $firstname ?> in the event of major site issues.<br />For non urgent issues, please use the button below to submit a support ticket.</p>
 <p><a href="#" class="button-link button-colour-alt">Submit a support ticket</a></p>
 </div>
 </div>
 <img src="code/php/qr_img.php?d=Testing+dynamic+QR+generation" class="qrborder" alt="QR Code" title="Scan me with your phone" />
-<!--<img src="assets/qr_img_example.png" alt="QR Code" title="Scan me with your phone" />-->
 <p>Scan the QR code to access this page directly from your phone.</p><br />
-<!--<input id="sitebutton" type="button" value="View on call schedule">-->
 <p><a href="#" class="button-link button-colour-main">View on call schedule</a></p>
 </div>
 <div id="footer">
