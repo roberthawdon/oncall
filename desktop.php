@@ -73,7 +73,7 @@ lblOnCall.fillText('is currently on call',400,140);
 </div>
 </form>-->
 <p>Note: Only escalate to <?php print $firstname ?> in the event of major site issues.<br />For non urgent issues, please file a support ticket to support@bedegaming.zendesk.com.</p>
-<p><a href="mailto:support@bedegaming.zendesk.com" class="button-link">Submit a Zendesk ticket</a></p>
+<p><a href="mailto:support@bedegaming.zendesk.com" class="button-link button-colour-alt">Submit a Zendesk ticket</a></p>
 </div>
 </div>
 <img src="code/php/qr_img.php?d=Testing+dynamic+QR+generation" class="qrborder" alt="QR Code" title="Scan me with your phone" />

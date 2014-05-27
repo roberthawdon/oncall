@@ -83,6 +83,22 @@ font-size: small;
     border: solid 1px #203E5F;
 }
 
+.button-colour-alt {
+    background: #78a300;
+    color: #000;
+    border: solid 1px #20538D;
+}
+
+.button-colour-alt:hover {
+    background: #95be22;
+    border: solid 1px #2A4E77;
+}
+
+.button-colour-alt:active {
+    background: #374a00;
+    border: solid 1px #203E5F;
+}
+
 
 img.qrborder {
 	background-color: #9999ff;
