@@ -47,6 +47,7 @@ include "app/getcalldata.php";
 </div>
 </form>-->
 <p>Note: Only escalate to <?php print $firstname ?> in the event of major site issues.<br />For non urgent issues, please file a support ticket to support@bedegaming.zendesk.com.</p>
+<p><a href="#" class="button-link button-colour-alt">Zendesk</a></p>
 </div>
 </div>
 <p><a href="#" class="button-link button-colour-main">View on call schedule</a></p>
