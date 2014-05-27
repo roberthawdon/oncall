@@ -86,17 +86,17 @@ font-size: small;
 .button-colour-alt {
     background: #78a300;
     color: #000;
-    border: solid 1px #20538D;
+    border: solid 1px #374a00;
 }
 
 .button-colour-alt:hover {
     background: #95be22;
-    border: solid 1px #2A4E77;
+    border: solid 1px #374a00;
 }
 
 .button-colour-alt:active {
     background: #374a00;
-    border: solid 1px #203E5F;
+    border: solid 1px #374a00;
 }
 
 
