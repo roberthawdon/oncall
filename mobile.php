@@ -28,11 +28,11 @@ include "app/getcalldata.php";
 <img src="uploads/<?php print $avatar ?>" width="80px" height="80px" alt="<?php print $fullname ?>" />
 <p><?php print $fullname ?> is currently on call</p>
 <div class="actions">
-<p><a href="callto:<?php print $phone ?>" class="button-link button-colour-main">Phone</a></p>
-<p><a href="sms:<?php print $phone ?>" class="button-link button-colour-main">SMS</a></p>
-<p><a href="mailto:<?php print $email ?>" class="button-link button-colour-main">E-Mail</a></p>
+<p><a href="callto:<?php print $phone ?>" class="button-link button-colour-main" data-rel="external">Phone</a></p>
+<p><a href="sms:<?php print $phone ?>" class="button-link button-colour-main" data-rel="external">SMS</a></p>
+<p><a href="mailto:<?php print $email ?>" class="button-link button-colour-main" data-rel="external">E-Mail</a></p>
 <p>Note: Only escalate to <?php print $firstname ?> in the event of major site issues.<br />For non urgent issues, please use the button below to submit a support ticket.</p>
-<p><a href="<?php echo "mailto:".getoption("support_email"); ?>" class="button-link button-colour-alt">Support ticket</a></p>
+<p><a href="<?php echo "mailto:".getoption("support_email"); ?>" class="button-link button-colour-alt" data-rel="external">Support ticket</a></p>
 </div>
 </div>
 <p><a href="#" class="button-link button-colour-main">View on call schedule</a></p>
