@@ -1,6 +1,6 @@
 <?php
 
-$version = "0.0.1";
+$version = "0.0.2"; //Temporary version counter until index.php and login is implemented.
 
 $auth = $_GET['auth'];
 
