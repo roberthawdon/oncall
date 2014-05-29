@@ -1,3 +1,14 @@
+<?php
+
+if (isset($_GET['error'])) {
+$error = $_GET['error'];
+if $error = "unauthorized" {
+$errormessage = "Error: Unauthorized";
+}
+}
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -5,9 +16,16 @@
 <meta name="viewport" content="width=device-width, target-densityDpi=device-dpi, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/> 
 <link rel='stylesheet' id='main'  href='assets/login.css' type='text/css' />
 <script type="text/javascript" src="assets/rounded_corners.js"></script>
-<title>Who's on call? - Bede Gaming</title>
+<title>Who's on call?</title>
 </head>
 <body>
+<?php
+
+if (isset($errormessage)) {
+echo "<p>".$errormessage."</p>";
+}
+
+ ?>
 <form>
         <label>Username:</label>
             <input type="text" name="username" />
