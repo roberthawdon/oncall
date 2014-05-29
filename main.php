@@ -40,7 +40,8 @@ include_once "mobile.php";
 include_once "desktop.php";
 }
 } else {
-echo "Unauthorized";
+//echo "Unauthorized";
+header( 'Location: /?error=unauthorized' ) ;
 }
 
 ?>
