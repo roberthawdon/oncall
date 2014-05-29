@@ -2,7 +2,7 @@
 
 if (isset($_GET['error'])) {
 $error = $_GET['error'];
-if ($error = "unauthorized") {
+if ($error == "unauthorized") {
 $errormessage = "Error: Unauthorized";
 }
 }
