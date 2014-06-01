@@ -104,7 +104,7 @@ return $valid;
 }
 
 if (isset($_COOKIE['user'])) {
-$cookieuser = $_COOKIE['user']));
+$cookieuser = $_COOKIE['user'];
 }
 
 if (isset($_GET['auth'])) {
