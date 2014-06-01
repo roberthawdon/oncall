@@ -2,11 +2,18 @@
 
 $version = "0.0.2"; //Temporary version counter until index.php and login is implemented.
 
-$auth = $_GET['auth'];
-
 include_once "config/config.php";
 include $PATH."app/dblogin.php";
 include $PATH."app/getoption.php";
+
+if (isset($_GET['auth'])) {
+$auth = $_GET['auth'];
+}
+
+if (isset($_POST['username'])) {
+$username = $_POST['username'];
+$password = md5($PWSALT.$user.$_POST['password']);
+}
 
 function checkauth($auth) {
 
@@ -29,7 +36,32 @@ return $valid;
 
 }
 
+function checklogin($username, $password) {
+
+global $con, $PATH, $DBHOST, $DBUSER, $DBPASS, $DBNAME;
+
+$query = "SELECT tbl_users.* FROM tbl_users WHERE username = '$username' AND password = '$password'";
+
+mysqli_select_db($con , $DBNAME) or die("Error: ".mysqli_error($con));
+
+$result = $con->query($query) or die("Error: ".mysqli_error($con));
+
+if($result->num_rows == 0)
+{
+$valid = FALSE;
+} else {
+$valid = TRUE;
+}
+
+return $valid;
+
+}
+
+if (isset($_GET['auth'])) {
 $valid = checkauth($auth);
+} else {
+$valid = checklogin($username, $password);
+}
 
 if ($valid) {
 $useragent=$_SERVER['HTTP_USER_AGENT'];
