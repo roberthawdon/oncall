@@ -94,7 +94,7 @@ $valid = checkauth($auth);
 } elseif (isset($_POST['username'])) {
 $valid = checklogin($username, $password);
 } elseif (isset($_COOKIE['auth'])) {
-$valid = checkcookie($auth);
+$valid = checkcookie($cookie);
 } else {
 $valid = FALSE;
 }
