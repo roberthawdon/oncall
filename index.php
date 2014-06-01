@@ -13,9 +13,12 @@ By Robert Ian Hawdon - http://robertianhawdon.me.uk
 
 */
 
-$wocversion = "0.0.0";
+$wocversion = "0.1.0";
 
+if (isset($_COOKIE['auth']) || isset($_GET['auth'])) {
+include_once "main.php";
+} else {
 include_once "login.php";
-
+}
 
 ?>
