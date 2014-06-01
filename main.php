@@ -9,10 +9,11 @@ include $PATH."app/getoption.php";
 if (isset($_GET['auth'])) {
 $auth = $_GET['auth'];
 }
-
-if (isset($_POST['username'])) {
+elseif (isset($_POST['username'])) {
 $username = $_POST['username'];
 $password = md5($PWSALT.$username.$_POST['password']);
+} elseif (isset($_COOKIE['auth'])) {
+$cookie = $_COOKIE['auth'];
 }
 
 function checkauth($auth) {
@@ -30,6 +31,10 @@ if($result->num_rows == 0)
 $valid = FALSE;
 } else {
 $valid = TRUE;
+}
+
+if ($valid) {
+setcookie("auth", "", time()-3600);
 }
 
 return $valid;
@@ -53,14 +58,45 @@ $valid = FALSE;
 $valid = TRUE;
 }
 
+while($row = mysqli_fetch_array($result)) {
+$cookieauth = $row['auth'];
+}
+
+setcookie("auth", $cookieauth);
+
+return $valid;
+
+}
+
+function checkcookie($auth) {
+
+global $con, $PATH, $DBHOST, $DBUSER, $DBPASS, $DBNAME;
+
+$query = "SELECT tbl_users.* FROM tbl_users WHERE auth = '$auth'";
+
+mysqli_select_db($con , $DBNAME) or die("Error: ".mysqli_error($con));
+
+$result = $con->query($query) or die("Error: ".mysqli_error($con));
+
+if($result->num_rows == 0)
+{
+$valid = FALSE;
+} else {
+$valid = TRUE;
+}
+
 return $valid;
 
 }
 
 if (isset($_GET['auth'])) {
 $valid = checkauth($auth);
-} else {
+} elseif (isset($_POST['username'])) {
 $valid = checklogin($username, $password);
+} elseif (isset($_COOKIE['auth'])) {
+$valid = checkcookie($auth);
+} else {
+$valid = FALSE;
 }
 
 if ($valid) {
