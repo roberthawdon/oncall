@@ -75,6 +75,6 @@ lblOnCall.fillText('is currently on call',400,140);
 <div id="footer">
 <p>&quot;Who's On Call?&quot; Version <?php echo $version?> &copy; 2014 <a href="http://robertianhawdon.me.uk">Robert Hawdon</a> - Bede Gaming Ltd.</p>
 <p>Best viewed with any modern browser</p>
-<p><a href="#">Logout</a><?php if ($staff == "1") { echo " | <a href=\"#\">Admin</a>"; }?></p>
+<p><a href="?action=logout">Logout</a><?php # if ($staff == "1") { echo " | <a href=\"#\">Admin</a>"; }?></p>
 </div>
 </html>

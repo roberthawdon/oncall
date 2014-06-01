@@ -1,10 +1,17 @@
 <?php
 
-$version = "0.0.2"; //Temporary version counter until index.php and login is implemented.
+$version = "0.0.3"; //Temporary version counter until index.php and login is implemented.
 
 include_once "config/config.php";
 include $PATH."app/dblogin.php";
 include $PATH."app/getoption.php";
+
+if (isset($_GET['action')) {
+if ($_GET['action'] == "logout") {
+setcookie("auth", "", time()-3600);
+setcookie("user", "", time()-3600);
+}
+}
 
 if (isset($_GET['auth'])) {
 $auth = $_GET['auth'];
@@ -20,32 +27,7 @@ function checkauth($auth) {
 
 global $con, $PATH, $DBHOST, $DBUSER, $DBPASS, $DBNAME;
 
-$query = "SELECT tbl_users.*, tbl_auth.* FROM tbl_auth INNER JOIN tbl_users on tbl_auth.user_ID=tbl_users.ID WHERE token = '$auth'";
-
-mysqli_select_db($con , $DBNAME) or die("Error: ".mysqli_error($con));
-
-$result = $con->query($query) or die("Error: ".mysqli_error($con));
-
-if($result->num_rows == 0)
-{
-$valid = FALSE;
-} else {
-$valid = TRUE;
-}
-
-if ($valid) {
-setcookie("auth", "", time()-3600);
-}
-
-return $valid;
-
-}
-
-function checklogin($username, $password) {
-
-global $con, $PATH, $DBHOST, $DBUSER, $DBPASS, $DBNAME;
-
-$query = "SELECT tbl_users.* FROM tbl_users WHERE username = '$username' AND password = '$password'";
+$query = "SELECT tbl_users.ID AS user_ID, tbl_users.auth AS cookie FROM tbl_auth INNER JOIN tbl_users on tbl_auth.user_ID=tbl_users.ID WHERE token = '$auth'";
 
 mysqli_select_db($con , $DBNAME) or die("Error: ".mysqli_error($con));
 
@@ -59,10 +41,42 @@ $valid = TRUE;
 }
 
 while($row = mysqli_fetch_array($result)) {
-$cookieauth = $row['auth'];
+$cookieuser = $row['user_ID'];
+}
+
+if ($valid) {
+setcookie("auth", "", time()-3600);
+setcookie("user", $cookieuser);
+}
+
+return $valid;
+
+}
+
+function checklogin($username, $password) {
+
+global $con, $PATH, $DBHOST, $DBUSER, $DBPASS, $DBNAME;
+
+$query = "SELECT tbl_users.ID AS user_ID, tbl_users.auth AS cookie FROM tbl_users WHERE username = '$username' AND password = '$password'";
+
+mysqli_select_db($con , $DBNAME) or die("Error: ".mysqli_error($con));
+
+$result = $con->query($query) or die("Error: ".mysqli_error($con));
+
+if($result->num_rows == 0)
+{
+$valid = FALSE;
+} else {
+$valid = TRUE;
+}
+
+while($row = mysqli_fetch_array($result)) {
+$cookieauth = $row['cookie'];
+$cookieuser = $row['user_ID'];
 }
 
 setcookie("auth", $cookieauth);
+setcookie("user", $cookieuser);
 
 return $valid;
 
@@ -87,6 +101,10 @@ $valid = TRUE;
 
 return $valid;
 
+}
+
+if (isset($_COOKIE['user'])) {
+$cookieuser = $_COOKIE['user']));
 }
 
 if (isset($_GET['auth'])) {
