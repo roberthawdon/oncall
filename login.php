@@ -26,7 +26,7 @@ echo "<p>".$errormessage."</p>";
 }
 
  ?>
-<form>
+<form action="main.php" method="post">
         <label>Username:</label>
             <input type="text" name="username" />
         <label>Password:</label>
