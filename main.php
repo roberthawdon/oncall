@@ -12,7 +12,7 @@ $auth = $_GET['auth'];
 
 if (isset($_POST['username'])) {
 $username = $_POST['username'];
-$password = md5($PWSALT.$user.$_POST['password']);
+$password = md5($PWSALT.$username.$_POST['password']);
 }
 
 function checkauth($auth) {
