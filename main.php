@@ -10,6 +10,7 @@ if (isset($_GET['action'])) {
 if ($_GET['action'] == "logout") {
 setcookie("auth", "", time()-3600);
 setcookie("user", "", time()-3600);
+header( 'Location: /' ) ;
 }
 }
 
