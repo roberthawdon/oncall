@@ -6,7 +6,7 @@ include_once "config/config.php";
 include $PATH."app/dblogin.php";
 include $PATH."app/getoption.php";
 
-if (isset($_GET['action')) {
+if (isset($_GET['action'])) {
 if ($_GET['action'] == "logout") {
 setcookie("auth", "", time()-3600);
 setcookie("user", "", time()-3600);
