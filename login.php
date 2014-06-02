@@ -27,7 +27,7 @@ $errormessage = "Error: Unauthorized";
             <?php
 
 if (isset($errormessage)) {
-echo "<label class=\"error\">".$errormessage."</label>";
+echo "<label class=\"errormessage\">".$errormessage."</label>\n";
 }
 
  ?>
