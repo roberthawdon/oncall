@@ -19,18 +19,18 @@ $errormessage = "Error: Unauthorized";
 <title>Who's on call?</title>
 </head>
 <body>
-<?php
-
-if (isset($errormessage)) {
-echo "<p>".$errormessage."</p>";
-}
-
- ?>
 <form action="main.php" method="post">
         <label>Username:</label>
             <input type="text" name="username" />
         <label>Password:</label>
             <input type="password" name="password"  />
+            <?php
+
+if (isset($errormessage)) {
+echo "<label class=\"error\">".$errormessage."</label>";
+}
+
+ ?>
             <input type="submit" value="Submit" name="submit" class="submit" />
 </form>  
 </body>
