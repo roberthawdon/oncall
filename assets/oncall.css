@@ -99,6 +99,22 @@ font-size: small;
     border: solid 1px #374a00;
 }
 
+.button-colour-red {
+    background: #EB2323;
+    color: #FFF;
+    border: solid 1px #370000;
+}
+
+.button-colour-red:hover {
+    background: #EB4545;
+    border: solid 1px #370000;
+}
+
+.button-colour-red:active {
+    background: #DC1212;
+    border: solid 1px #370000;
+}
+
 
 img.qrborder {
 	background-color: #9999ff;
