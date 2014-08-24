@@ -25,6 +25,8 @@ while($row = mysqli_fetch_array($result))
 
 $fullname = "$firstname $lastname";
 
+$emailmd5 = md5 ($email);
+
 include $PATH."/app/dblogout.php";
 
 ?>
