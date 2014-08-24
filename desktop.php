@@ -45,6 +45,9 @@ var imgFace=c.getContext("2d");
 var img = new Image();
 img.src = "//www.gravatar.com/avatar/<?php print $emailmd5 ?>?s=160"
 img.onload = function () {
+   imgFace.beginPath();
+   imgFace.arc(110, 110, 100, 0, 2*Math.PI, true);
+   imgFace.clip();
    imgFace.drawImage(img,120,30);
 }
 
