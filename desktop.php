@@ -49,6 +49,10 @@ img.onload = function () {
    imgFace.arc(200, 110, 80, 0, 2*Math.PI, true);
    imgFace.clip();
    imgFace.drawImage(img,120,30);
+   imgFace.arc(200, 110, 80, 0, 2*Math.PI, true);
+   imgFace.strokeStyle = 'blue';
+   imgFace.lineWidth = 2;
+   imgFace.stroke();
 }
 
 var lblName=c.getContext("2d");
