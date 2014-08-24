@@ -43,7 +43,7 @@ var grd=roundRect(ctx, 10, 10, 780, 200, 50, true);
 
 var imgFace=c.getContext("2d");
 var img = new Image();
-img.src = "//www.gravatar.com/avatar/<?php print $emailmd5 ?>?s=160"
+img.src = "//www.gravatar.com/avatar/<?php print $emailmd5 ?>?s=160&d=mm"
 img.onload = function () {
    imgFace.beginPath();
    imgFace.arc(200, 110, 80, 0, 2*Math.PI, true);
