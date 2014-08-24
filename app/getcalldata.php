@@ -4,7 +4,7 @@ include $PATH."/app/dblogin.php";
 
 mysqli_select_db($con , $DBNAME) or die("Error: ".mysqli_error($con));
 
-$result = $con->query("SELECT tbl_schedules.*, tbl_users.* FROM tbl_schedules INNER JOIN tbl_users ON tbl_schedules.user_ID=tbl_users.ID WHERE NOW() BETWEEN tbl_schedules.start_date AND tbl_schedules.end_date") or die("Error: ".mysqli_error($con));
+$result = $con->query("CALL get_oncall_now") or die("Error: ".mysqli_error($con));
 
 while($row = mysqli_fetch_array($result))
   {

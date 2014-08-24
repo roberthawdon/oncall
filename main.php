@@ -1,6 +1,6 @@
 <?php
 
-$version = "0.0.3"; //Temporary version counter until index.php and login is implemented.
+$version = "0.0.4"; //Temporary version counter until index.php and login is implemented.
 
 include_once "config/config.php";
 include $PATH."app/dblogin.php";
