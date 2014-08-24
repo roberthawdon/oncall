@@ -50,8 +50,8 @@ img.onload = function () {
    imgFace.clip();
    imgFace.drawImage(img,120,30);
    imgFace.arc(200, 110, 80, 0, 2*Math.PI, true);
-   imgFace.strokeStyle = 'blue';
-   imgFace.lineWidth = 2;
+   imgFace.strokeStyle = '#a7a7ff';
+   imgFace.lineWidth = 5;
    imgFace.stroke();
 }
 
