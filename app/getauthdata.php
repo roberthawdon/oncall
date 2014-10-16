@@ -21,13 +21,7 @@ while($row = mysqli_fetch_array($result))
   $kcomment = $row['comment'];
   }
   
-  return $kkeyID;
-  return $kuserID;
-  return $ktoken;
-  return $kcreated;
-  return $kexpiry;
-  return $kterminated;
-  return $kcomment;
+  return array($kkeyID, $kuserID, $ktoken, $kcreated, $kexpiry, $kterminated, $kcomment);
 
 include $PATH."/app/dblogout.php";
 
