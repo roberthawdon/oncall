@@ -3,6 +3,7 @@
 <?php
 
 include "app/getcalldata.php";
+include "app/getauthdata.php";
 
 ?>
 
@@ -19,7 +20,7 @@ include "app/getcalldata.php";
 <body>
 <div id="page">
 <div id="top">
-<img src="assets/logo.png" alt="Bede Gaming" title="Bede Gaming" />
+<img src="assets/logo.png" alt="<?php echo getoption("organisation")?>" title="<?php echo getoption("organisation")?>" />
 <h1>Who's on call?</h1>
 </div>
 <div id="oncall">
@@ -76,7 +77,8 @@ lblOnCall.fillText('is currently on call',400,140);
 </div>
 <!--<img src="code/php/qr_img.php?d=Testing+dynamic+QR+generation" class="qrborder" alt="QR Code" title="Scan me with your phone" />
 <p>Scan the QR code to access this page directly from your phone.</p><br />-->
-<p>You have 0 access keys. You'll need to generate one to access the Mobile interface, the calendar feed, or the API</p>
+<!--<p>You have 0 access keys. You'll need to generate one to access the Mobile interface, the calendar feed, or the API</p>-->
+<p>Auth Test: <?php echo getauth($_COOKIE['user'])[3]?></p>
 <p><a href="#" class="button-link button-colour-main"">Generate</a></p>
 <p><a href="#" class="button-link button-colour-main">View on call schedule</a></p>
 </div>
