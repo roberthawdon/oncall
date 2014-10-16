@@ -78,7 +78,7 @@ lblOnCall.fillText('is currently on call',400,140);
 <!--<img src="code/php/qr_img.php?d=Testing+dynamic+QR+generation" class="qrborder" alt="QR Code" title="Scan me with your phone" />
 <p>Scan the QR code to access this page directly from your phone.</p><br />-->
 <!--<p>You have 0 access keys. You'll need to generate one to access the Mobile interface, the calendar feed, or the API</p>-->
-<p>Auth Test: <?php echo getauth($_COOKIE['user'])[3]?></p>
+<p>User ID: <?php echo $_COOKIE['user']?> <br /> Auth Test: <?php echo getauth($_COOKIE['user'])[3]?></p>
 <p><a href="#" class="button-link button-colour-main"">Generate</a></p>
 <p><a href="#" class="button-link button-colour-main">View on call schedule</a></p>
 </div>

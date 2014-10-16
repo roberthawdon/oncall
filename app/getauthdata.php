@@ -8,7 +8,7 @@ include $PATH."/app/dblogin.php";
 
 mysqli_select_db($con , $DBNAME) or die("Error: ".mysqli_error($con));
 
-$result = $con->query("CALL get_access_keys($userid)") or die("Error: ".mysqli_error($con));
+$result = $con->query("CALL get_access_keys('$userid')") or die("Error: ".mysqli_error($con));
 
 while($row = mysqli_fetch_array($result))
   {
