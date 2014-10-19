@@ -1,5 +1,3 @@
-<!-- Who's on call? -->
-
 <?php
 
 include "app/getcalldata.php";
@@ -95,7 +93,7 @@ lblOnCall.fillText('is currently on call',400,140);
 <div class="keys_body">
 <p>Your access keys:</p>
 <?php include "app/userkeys.php"; ?>
-<p><a href="#" class="button-link button-colour-main"">Generate</a></p>
+<p><a href="#" class="button-link button-colour-main">Generate</a></p>
 <p><a href="#" class="button-link button-colour-main">View on call schedule</a></p>
 </div>
 </div>
