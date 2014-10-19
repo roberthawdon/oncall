@@ -14,6 +14,19 @@ include "app/getauthdata.php";
 <link rel='stylesheet' id='reset'  href='assets/reset.css' type='text/css' media='all' />
 <link rel='stylesheet' id='main'  href='assets/oncall.css' type='text/css' />
 <script type="text/javascript" src="assets/rounded_corners.js"></script>
+<script type="text/javascript" src="assets/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+  //hide the all of the element with class keys_body
+  $(".keys_body").hide();
+  //toggle the componenet with class keys_body
+  $(".keys_head").click(function()
+  {
+    $(this).next(".keys_body").slideToggle(600);
+  });
+});
+</script>
 <?php include_once "assets/favicon.php"; ?>
 <title><?php print $fullname ?> is currently on call</title>
 </head>
@@ -78,10 +91,13 @@ lblOnCall.fillText('is currently on call',400,140);
 <!--<img src="code/php/qr_img.php?d=Testing+dynamic+QR+generation" class="qrborder" alt="QR Code" title="Scan me with your phone" />
 <p>Scan the QR code to access this page directly from your phone.</p><br />-->
 <!--<p>You have 0 access keys. You'll need to generate one to access the Mobile interface, the calendar feed, or the API</p>-->
+<p class="keys_head">Access Keys</p>
+<div class="keys_body">
 <p>Your access keys:</p>
 <?php include "app/userkeys.php"; ?>
 <p><a href="#" class="button-link button-colour-main"">Generate</a></p>
 <p><a href="#" class="button-link button-colour-main">View on call schedule</a></p>
+</div>
 </div>
 <div id="footer">
 <p>&quot;Who's On Call?&quot; Version <?php echo $version?> &copy; 2014 <a href="http://robertianhawdon.me.uk">Robert Hawdon</a> - Bede Gaming Ltd.</p>
