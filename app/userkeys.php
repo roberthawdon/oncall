@@ -17,11 +17,9 @@ while($row = mysqli_fetch_array($result))
   $kcomment[] = $row['comment'];
   }
 
-#foreach ( $kkeyID as $index => $keyID ) {
-#echo "<p>Key ID: " . $keyID . "<br />Key Value: " . $ktoken[$index] . "</p>";
-#}
-
-print $kkeyID;
+foreach ( $kkeyID as $index => $keyID ) {
+echo "<p>Key ID: " . $keyID . "<br />Key Value: " . $ktoken[$index] . "</p>";
+}
 
 
 ?>
