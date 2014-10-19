@@ -19,7 +19,7 @@ while($row = mysqli_fetch_array($result))
 
 foreach ( $kkeyID as $index => $keyID ) {
 #echo "<p>Key ID: " . $keyID . "<br />Key Value: " . $ktoken[$index] . "</p>";
-echo "<img src=\"code/php/qr_img.php?d=http%3A%2F%2Fdev-oncall.op-ezy.co.uk%2F%3Fauth%3D" . $ktoken[$index] . "\" class=\"qrborder\" alt=\"QR Code\" title=\"Scan me with your phone\" />";
+echo "<p><img src=\"code/php/qr_img.php?d=http%3A%2F%2Fdev-oncall.op-ezy.co.uk%2F%3Fauth%3D" . $ktoken[$index] . "\" class=\"qrborder\" alt=\"QR Code\" title=\"Scan me with your phone\" /></p>";
 }
 
 
