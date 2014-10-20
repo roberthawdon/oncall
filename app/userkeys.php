@@ -19,7 +19,7 @@ while($row = mysqli_fetch_array($result))
 
 ?>
 <p>Your Access Keys:</p>
-<table>
+<p><table>
 <tr>
 <td>QR Link</td>
 <td>Key</td>
@@ -34,7 +34,7 @@ foreach ( $kkeyID as $index => $keyID ) {
 #echo "<p>Key ID: " . $keyID . "<br />Key Value: " . $ktoken[$index] . "</p>";
 #echo "<p><img src=\"code/php/qr_img.php?d=http%3A%2F%2Fdev-oncall.op-ezy.co.uk%2F%3Fauth%3D" . $ktoken[$index] . "\" class=\"qrborder\" alt=\"QR Code\" title=\"Scan me with your phone\" /></p>";
 echo "<tr>\n";
-echo "<td><img src=\"code/php/qr_img.php?d=http%3A%2F%2Fdev-oncall.op-ezy.co.uk%2F%3Fauth%3D" . $ktoken[$index] . "\" alt=\"QR Code\" title=\"Scan me with your phone\" /></td>\n";
+echo "<td><img src=\"code/php/qr_img.php?d=http%3A%2F%2Fdev-oncall.op-ezy.co.uk%2F%3Fauth%3D" . $ktoken[$index] . "&s=2\" alt=\"QR Code\" title=\"Scan me with your phone\" /></td>\n";
 echo "<td>" . $ktoken[$index] . "</td>\n";
 echo "<td>" . $kcomment[$index] . "</td>\n";
 echo "<td>" . $kcreated[$index] . "</td>\n";
@@ -46,6 +46,6 @@ echo "</tr>\n";
 
 ?>
 
-</table>
+</table></p>	
 
 <p><a href="#" class="button-link button-colour-main">Generate</a></p>
