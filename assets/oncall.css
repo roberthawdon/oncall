@@ -10,7 +10,7 @@ font-size: xx-large;
 }
 
 table {
-border: 1;
+border: 1px solid #7e7eff;
 width:930px;
   margin: 10px auto;
 }
