@@ -24,7 +24,6 @@ while($row = mysqli_fetch_array($result))
 <td>QR Link</td>
 <td>Key</td>
 <td>Name</td>
-<td>Created</td>
 <td>Vaild To</td>
 <td>Delete</td>
 </tr>
@@ -37,7 +36,6 @@ echo "<tr>\n";
 echo "<td><img src=\"code/php/qr_img.php?d=http%3A%2F%2Fdev-oncall.op-ezy.co.uk%2F%3Fauth%3D" . $ktoken[$index] . "&s=2\" alt=\"QR Code\" title=\"Scan me with your phone\" /></td>\n";
 echo "<td>" . $ktoken[$index] . "</td>\n";
 echo "<td>" . $kcomment[$index] . "</td>\n";
-echo "<td>" . $kcreated[$index] . "</td>\n";
 echo "<td>" . $kexpiry[$index] . "</td>\n";
 echo "<td><a href=\"#\" class=\"button-link button-colour-red\">Delete</a></td>\n";
 echo "</tr>\n";
