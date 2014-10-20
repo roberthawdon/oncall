@@ -9,8 +9,11 @@ h1 {
 font-size: xx-large;
 }
 
-table {
+table, th, td {
 border: 1px solid #7e7eff;
+}
+
+table {
 width:930px;
   margin: 10px auto;
 }
