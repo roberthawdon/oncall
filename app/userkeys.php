@@ -39,7 +39,7 @@ echo "<td>" . $ktoken[$index] . "</td>\n";
 echo "<td>" . $kcomment[$index] . "</td>\n";
 echo "<td>" . $kcreated[$index] . "</td>\n";
 echo "<td>" . $kexpiry[$index] . "</td>\n";
-echo "<td><a href="#" class="button-link button-colour-red">Delete</a></td>\n";
+echo "<td><a href=\"#\" class=\"button-link button-colour-red\">Delete</a></td>\n";
 echo "</tr>\n";
 }
 
