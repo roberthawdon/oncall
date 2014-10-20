@@ -89,11 +89,9 @@ lblOnCall.fillText('is currently on call',400,140);
 <!--<img src="code/php/qr_img.php?d=Testing+dynamic+QR+generation" class="qrborder" alt="QR Code" title="Scan me with your phone" />
 <p>Scan the QR code to access this page directly from your phone.</p><br />-->
 <!--<p>You have 0 access keys. You'll need to generate one to access the Mobile interface, the calendar feed, or the API</p>-->
-<p class="keys_head button-link button-colour-main">Access Keys</p>
+<p class="keys_head button-link button-colour-main">Access Key Management</p>
 <div class="keys_body">
-<p>Your access keys:</p>
 <?php include "app/userkeys.php"; ?>
-<p><a href="#" class="button-link button-colour-main">Generate</a></p>
 </div>
 <p><a href="#" class="button-link button-colour-main">View on call schedule</a></p>
 </div>

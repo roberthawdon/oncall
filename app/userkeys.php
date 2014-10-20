@@ -17,6 +17,10 @@ while($row = mysqli_fetch_array($result))
   $kcomment[] = $row['comment'];
   }
 
+?>
+<p>Your Access Keys:</p>
+<?php
+
 foreach ( $kkeyID as $index => $keyID ) {
 #echo "<p>Key ID: " . $keyID . "<br />Key Value: " . $ktoken[$index] . "</p>";
 echo "<p><img src=\"code/php/qr_img.php?d=http%3A%2F%2Fdev-oncall.op-ezy.co.uk%2F%3Fauth%3D" . $ktoken[$index] . "\" class=\"qrborder\" alt=\"QR Code\" title=\"Scan me with your phone\" /></p>";
@@ -24,3 +28,5 @@ echo "<p><img src=\"code/php/qr_img.php?d=http%3A%2F%2Fdev-oncall.op-ezy.co.uk%2
 
 
 ?>
+
+<p><a href="#" class="button-link button-colour-main">Generate</a></p>
