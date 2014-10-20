@@ -19,7 +19,7 @@ while($row = mysqli_fetch_array($result))
 
 ?>
 <p>Your Access Keys:</p>
-<p><table>
+<table>
 <tr>
 <td>QR Link</td>
 <td>Key</td>
@@ -46,6 +46,6 @@ echo "</tr>\n";
 
 ?>
 
-</table></p>	
+</table>	
 
 <p><a href="#" class="button-link button-colour-main">Generate</a></p>

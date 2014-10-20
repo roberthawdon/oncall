@@ -9,6 +9,12 @@ h1 {
 font-size: xx-large;
 }
 
+table {
+border: 1;
+width:930px;
+  margin: 10px auto;
+}
+
 #page {
 width: 950px;
   margin-left: auto ;
